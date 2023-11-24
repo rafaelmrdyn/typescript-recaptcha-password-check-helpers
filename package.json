@@ -1,10 +1,13 @@
 {
-  "name": "recaptcha-password-check-helpers",
-  "version": "1.0.3",
+  "name": "recaptcha-password-check-helpers-fixed",
+  "version": "1.0.0",
   "description": "A client library for Typescript for reCAPTCHA's private password check API.",
   "author": "reCAPTCHA Team <no-reply@google.com>",
-  "repository": "GoogleCloudPlatform/typescript-recaptcha-password-check-helpers",
-  "homepage": "https://github.com/GoogleCloudPlatform/typescript-recaptcha-password-check-helpers#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelmrdyn/typescript-recaptcha-password-check-helpers.git"
+  },
+  "homepage": "https://github.com/rafaelmrdyn/typescript-recaptcha-password-check-helpers#readme",
   "license": "Apache-2.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,12 +15,19 @@
     "build": "tsc --build",
     "test": "jasmine --config=jasmine.json",
     "prepare": "npm run build",
-    "prepublishOnly" : "npm test"
+    "prepublishOnly": "npm test"
   },
   "dependencies": {
     "@types/node": "^18.11.9",
     "typescript": "^4.9.3",
     "@types/jasmine": "^4.3.1",
     "jasmine": "^4.5.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/rafaelmrdyn/typescript-recaptcha-password-check-helpers/issues"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "devDependencies": {}
 }

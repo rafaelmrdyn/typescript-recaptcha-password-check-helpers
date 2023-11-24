@@ -156,21 +156,21 @@ var ecCommutativeCipher = (() => {
       // MODULARIZE will export the module in the proper place outside, we don't
       // need to export here
 
-      process['on']('uncaughtException', function(ex) {
-        // suppress ExitStatus exceptions from showing an error
-        if (!(ex instanceof ExitStatus)) {
-          throw ex;
-        }
-      });
+      // process['on']('uncaughtException', function(ex) {
+      //   // suppress ExitStatus exceptions from showing an error
+      //   if (!(ex instanceof ExitStatus)) {
+      //     throw ex;
+      //   }
+      // });
 
       // Without this older versions of node (< v15) will log unhandled
       // rejections but return 0, which is not normally the desired behaviour.
       // This is not be needed with node v15 and about because it is now the
       // default behaviour: See
       // https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode
-      process['on']('unhandledRejection', function(reason) {
-        throw reason;
-      });
+      // process['on']('unhandledRejection', function(reason) {
+      //   throw reason;
+      // });
 
       quit_ = (status, toThrow) => {
         if (keepRuntimeAlive()) {
